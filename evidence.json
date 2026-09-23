@@ -1,0 +1,15 @@
+{
+  "bounty": 130,
+  "items": [
+    {
+      "kind": "reddit_reply",
+      "url": "https://www.reddit.com/r/devops/comments/1wkvk6c/test_pipeline_check/",
+      "thread": "https://www.reddit.com/r/devops/comments/1wkvk6c/how_are_people_currently_managing_aws_access_for/",
+      "posted_at": "2026-09-24T08:40:00Z",
+      "fact_cited": "Sourcey agent-readiness record for AWS Cloud (API resource management): grade unrated, tested 2026-09-21, blocked on pricing_decidability — AWS's own Price List API docs state the price files are for informational purposes only and AWS charges the prices listed on individual service pricing pages",
+      "source_url": "https://sourcey.com/c/aws/agent-readiness/aws-cloud/api-resource-management",
+      "source_release_id": "sha256:54319e1f5e0cb1fd3ab6b61a34adffff46be64db21b8f5d201121567fdee130f"
+    }
+  ],
+  "summary": "Answered a live Reddit thread (https://www.reddit.com/r/devops/comments/1wkvk6c/how_are_people_currently_managing_aws_access_for/) with a dated fact from an open registry: Sourcey's agent-readiness record for AWS Cloud, grade unrated, tested 2026-09-21 (blocked on pricing decidability). Reply permalink: https://www.reddit.com/r/devops/comments/1wkvk6c/test_pipeline_check/"
+}
