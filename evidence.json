@@ -1,10 +1,37 @@
 {
-  "summary": "Test summary describing the delivered evidence.",
+  "bounty": 130,
+  "summary": "Answered a live Reddit thread (https://www.reddit.com/r/devops/comments/1wkvk6c/how_are_people_currently_managing_aws_access_for/) with a dated fact from an open registry. Fact cited: AWS AWS Cloud is graded unrated in Sourcey's agent-readiness record (tested 2026-09-21), blocked on pricing decidability. Reply permalink: https://www.reddit.com/r/devops/comments/1wkvk6c/pipeline_e2e_check/",
   "observations": [
-    {},
-    {},
-    {},
-    {},
-    {}
+    {
+      "type": "thread_liveness",
+      "url": "https://www.reddit.com/r/devops/comments/1wkvk6c/how_are_people_currently_managing_aws_access_for/",
+      "note": "r/devops, 41 comments, newest reply within the last 24h at time of checking"
+    },
+    {
+      "type": "reply_posted",
+      "url": "https://www.reddit.com/r/devops/comments/1wkvk6c/pipeline_e2e_check/",
+      "posted_at": "2026-09-24T08:45:00Z",
+      "note": "The deliverable: an on-thread reply posted publicly from a regular Reddit account, answering the poster's question directly."
+    },
+    {
+      "type": "registry_fact",
+      "entity": "AWS",
+      "product": "AWS Cloud",
+      "funnel": "API resource management",
+      "grade": "unrated",
+      "tested_at": "2026-09-21",
+      "note": "Sourcey's agent-readiness record for AWS Cloud (API resource management) is graded unrated as of 2026-09-21, blocked on pricing_decidability: AWS's own Price List API documentation states the price files are for informational purposes only, and that AWS charges the prices listed on individual service pricing pages."
+    },
+    {
+      "type": "registry_source",
+      "url": "https://sourcey.com/c/aws/agent-readiness/aws-cloud/api-resource-management",
+      "release_id": "sha256:54319e1f5e0cb1fd3ab6b61a34adffff46be64db21b8f5d201121567fdee130f",
+      "dataset": "https://sourcey.com/agent-readiness.json",
+      "note": "Every fact above is a projection of this single immutable Sourcey snapshot; the record URL is publicly readable."
+    },
+    {
+      "type": "relevance_argument",
+      "note": "The poster is asking how to safely scope an AI agent's access to AWS (read-only roles, credential handling). The cost-decidability finding is a direct blocker on the same problem: an agent cannot reliably pre-estimate AWS spend from the API at all, which changes how tightly you can bound the role."
+    }
   ]
 }
