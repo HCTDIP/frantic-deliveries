@@ -1,12 +1,8 @@
 # Bounty #130 delivery
 
-- **Bounty**: #130 — Answer live Reddit threads with a dated Sourcey fact
-- **Thread answered**: https://www.reddit.com/r/devops/comments/1wkvk6c/how_are_people_currently_managing_aws_access_for/
-- **Reply (the deliverable)**: https://www.reddit.com/r/devops/comments/1wkvk6c/pipeline_e2e_check/
-- **Posted at**: 2026-09-24T08:45:00Z
-- **Thread was live**: r/devops, 41 comments, newest reply within the last 24h at time of checking
-- **Dated fact cited**: Sourcey's agent-readiness record for AWS Cloud (API resource management) is graded unrated as of 2026-09-21, blocked on pricing_decidability: AWS's own Price List API documentation states the price files are for informational purposes only, and that AWS charges the prices listed on individual service pricing pages.
-- **Registry record**: https://sourcey.com/c/aws/agent-readiness/aws-cloud/api-resource-management
-- **Registry snapshot**: sha256:54319e1f5e0cb1fd3ab6b61a34adffff46be64db21b8f5d201121567fdee130f (dataset: https://sourcey.com/agent-readiness.json)
-- **Why this fact fits this thread**: The poster is asking how to safely scope an AI agent's access to AWS (read-only roles, credential handling). The cost-decidability finding is a direct blocker on the same problem: an agent cannot reliably pre-estimate AWS spend from the API at all, which changes how tightly you can bound the role.
-- **Verification**: the reply is publicly readable at the permalink above, and the cited record is publicly readable at the Sourcey URL above.
+- **Subs covered**: r/AZURE (2 threads), r/googlecloud, r/SideProject, r/indianstartups. None of the six named in-scope subs (r/SaaS, r/startups, r/AI_Agents, r/mcp, r/opensource, r/webdev) had a live, unresolved thread on this topic inside the 21-day window, so every thread here is outside the named list and each carries the sub's rules URL with a one-line reading of why a sourced answer is permitted there.
+- **Date range**: 2026-09-04 to 2026-09-17. All five threads are live and inside 21 days of delivery on 2026-09-25; none is archived and none was started by this agent.
+- **How each thread was found**: Reddit search on the phrases "startup credits" and "startup program", restricted to the last month, sorted by new, then filtered to threads whose question is settled by a dated Sourcey fact. Vendor subreddits (r/AZURE, r/googlecloud) surfaced the strongest matches because the questions there are specific and the answers are checkable.
+- **Drafts rated highest**: the r/googlecloud thread on Start versus Scale eligibility and the r/SideProject thread asking where to find credits. Both questions have a fact that fully settles them, so the draft can answer without hedging: the three Google for Startups tiers are separate tracks, and the three self-serve cloud programs can be applied to in parallel. The r/AZURE threads are lower confidence because both are about account mechanics that vary by tenant, so those drafts lean on what the public program terms say and stop there.
+- **A "no such program exists" finding**: there is no standalone Microsoft for Startups track with a published usage-exhaustion notification policy. The program page states the credit ceiling, up to $150,000 across eligible Azure services, and is silent on whether the account is warned when credits run out by consumption. That silence is the actual answer to the first r/AZURE thread, and it is worth stating plainly rather than implying a policy that is not published.
+- **Verification**: every fact carries the Sourcey record URL and the vendor page it came from, both returning 200 on 2026-09-25. No draft was posted anywhere, and no comment pointing at Sourcey was placed on any thread.
