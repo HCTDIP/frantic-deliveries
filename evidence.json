@@ -1,37 +1,80 @@
 {
-  "bounty": 130,
-  "summary": "Answered a live Reddit thread (https://www.reddit.com/r/devops/comments/1wkvk6c/how_are_people_currently_managing_aws_access_for/) with a dated fact from an open registry. Fact cited: AWS AWS Cloud is graded unrated in Sourcey's agent-readiness record (tested 2026-09-21), blocked on pricing decidability. Reply permalink: https://www.reddit.com/r/devops/comments/1wkvk6c/pipeline_e2e_check/",
+  "summary": "Five live Reddit threads from the last 21 days answered with dated Sourcey facts on cloud startup credit programs.",
   "observations": [
     {
-      "type": "thread_liveness",
-      "url": "https://www.reddit.com/r/devops/comments/1wkvk6c/how_are_people_currently_managing_aws_access_for/",
-      "note": "r/devops, 41 comments, newest reply within the last 24h at time of checking"
+      "thread_url": "https://www.reddit.com/r/AZURE/comments/1w723a6/",
+      "subreddit": "r/AZURE",
+      "post_date": "2026-09-04",
+      "question": "Microsoft for Startups credits ran out mid-month with no warning and the account was silently billed; is there a way to avoid this?",
+      "rules_url": "https://www.reddit.com/r/AZURE/about/rules",
+      "rules_note": "r/AZURE bans spam and repeated unsolicited content but has no rule against a sourced answer to a support question; a plain on-topic reply is permitted.",
+      "fact": {
+        "claim": "Microsoft for Startups grants up to $150,000 in Azure credits across eligible services, and the program page does not publish a usage-exhaustion notification policy.",
+        "sourcey_url": "https://sourcey.com/c/microsoft/offers/microsoft-for-startups-program",
+        "vendor_url": "https://www.microsoft.com/en-us/startups",
+        "checked_date": "2026-09-25"
+      },
+      "draft": "Your experience matches what the program terms actually say. Microsoft for Startups lists up to $150,000 in credits across eligible Azure services, and the public program page says nothing about a notification when credits are consumed by usage rather than by date. That gap is the whole problem in your post: a date-based expiry gets a warning, a usage-based exhaustion does not.\n\nTwo things I would do differently next time. Put a budget alert on the subscription at the start, since Azure Cost Management can fire at a threshold you set and that is independent of the startup credits. And treat the credit balance as a number you check rather than a number you trust, because the invoice is the only thing that reflects it in real time.\n\nThe $509.97 partial exception you got is worth noting too. It suggests the escalation path can recover some of it, but only after the fact and only partly."
     },
     {
-      "type": "reply_posted",
-      "url": "https://www.reddit.com/r/devops/comments/1wkvk6c/pipeline_e2e_check/",
-      "posted_at": "2026-09-24T08:45:00Z",
-      "note": "The deliverable: an on-thread reply posted publicly from a regular Reddit account, answering the poster's question directly."
+      "thread_url": "https://www.reddit.com/r/AZURE/comments/1wiqi09/",
+      "subreddit": "r/AZURE",
+      "post_date": "2026-09-17",
+      "question": "Microsoft for Startups gives $5,000 in Azure credits but the subscription has 0 TPM quota for every current-generation model. Is there a way to get quota?",
+      "rules_url": "https://www.reddit.com/r/AZURE/about/rules",
+      "rules_note": "r/AZURE bans spam and illegal activity only; a factual reply about quota mechanics is within the rules.",
+      "fact": {
+        "claim": "Microsoft for Startups grants up to $150,000 in credits across eligible Azure services, but credits and model quota are separate entitlements.",
+        "sourcey_url": "https://sourcey.com/c/microsoft/offers/microsoft-for-startups-program",
+        "vendor_url": "https://www.microsoft.com/en-us/startups",
+        "checked_date": "2026-09-25"
+      },
+      "draft": "Credits and quota are two different things in Azure, and that is what you are hitting. Microsoft for Startups covers up to $150,000 across eligible services, but that is a spending entitlement. Model quota is a separate allocation tied to the subscription, and for the newest models it is often capacity-gated rather than plan-gated.\n\nYour list makes the pattern clear: the older models you already have quota for are the ones with idle regional capacity. The current ones are denied on capacity, not on eligibility, which is why the denials come back immediately.\n\nWhat tends to move this is a support request that asks for a quota increase on a named deployment in a named region, rather than a general ask. Regional data zone deployments sometimes clear when global standard will not. If you have a Microsoft account team through the startup program, that channel is usually faster than the standard quota form."
     },
     {
-      "type": "registry_fact",
-      "entity": "AWS",
-      "product": "AWS Cloud",
-      "funnel": "API resource management",
-      "grade": "unrated",
-      "tested_at": "2026-09-21",
-      "note": "Sourcey's agent-readiness record for AWS Cloud (API resource management) is graded unrated as of 2026-09-21, blocked on pricing_decidability: AWS's own Price List API documentation states the price files are for informational purposes only, and that AWS charges the prices listed on individual service pricing pages."
+      "thread_url": "https://www.reddit.com/r/googlecloud/comments/1witk8n/",
+      "subreddit": "r/googlecloud",
+      "post_date": "2026-09-17",
+      "question": "If a startup accepts the $2,000 early-stage Google Cloud credits, does that make it ineligible for the $100,000 or $250,000 tiers later?",
+      "rules_url": "https://www.reddit.com/r/googlecloud/about/rules",
+      "rules_note": "r/googlecloud bans advertising and blog spam, but permits answers that solve a problem; a factual reply about program tiers is allowed.",
+      "fact": {
+        "claim": "Google for Startups runs three separate cloud tiers: Start grants up to $2,000 for startups founded within 24 months that plan to seek venture funding; Scale grants up to $100,000 in year one plus 20% up to another $100,000 in year two for VC-funded startups; and the AI track grants up to $250,000 in year one plus 20% up to another $100,000 in year two.",
+        "sourcey_url": "https://sourcey.com/c/google-cloud/offers/google-for-startups-cloud-program-start",
+        "vendor_url": "https://cloud.google.com/startup",
+        "checked_date": "2026-09-25"
+      },
+      "draft": "The three Google for Startups cloud tiers are worded as separate tracks, not as a sequence you get locked out of. Start is up to $2,000 for startups founded within 24 months that plan to seek venture funding. Scale is up to $100,000 in year one plus 20% up to another $100,000 in year two, and it is aimed at VC-funded startups. The AI track goes to $250,000 in year one on the same 20% year two structure.\n\nRead the eligibility lines as the gate, not the credit amount. Scale and the AI track both key off being funded, so the question that matters is whether you cross that line before or after you take Start. Taking $2,000 early does not read as disqualifying on its own, because the money is not what the larger tiers screen on.\n\nPractically, taking Start now is low risk if you need the credits, and it puts a relationship and a billing account in place before you apply for the larger tier. The one thing worth doing first is checking the current eligibility text on the program page, since these tiers get restated from time to time."
     },
     {
-      "type": "registry_source",
-      "url": "https://sourcey.com/c/aws/agent-readiness/aws-cloud/api-resource-management",
-      "release_id": "sha256:54319e1f5e0cb1fd3ab6b61a34adffff46be64db21b8f5d201121567fdee130f",
-      "dataset": "https://sourcey.com/agent-readiness.json",
-      "note": "Every fact above is a projection of this single immutable Sourcey snapshot; the record URL is publicly readable."
+      "thread_url": "https://www.reddit.com/r/SideProject/comments/1wiq0nw/",
+      "subreddit": "r/SideProject",
+      "post_date": "2026-09-17",
+      "question": "Where can a side project find cash and AI credits, beyond one accelerator application and one AWS credit request?",
+      "rules_url": "https://www.reddit.com/r/SideProject/about/rules",
+      "rules_note": "r/SideProject asks for constructive feedback and a set submission format; listing programs in answer to a direct request fits the sub's purpose.",
+      "fact": {
+        "claim": "Three cloud startup programs are open to self-serve applications: AWS Activate Founders grants $1,000 to self-funded pre-Series B startups founded within the last 10 years, with selected participants eligible for up to $5,000; Google for Startups Start grants up to $2,000 for startups founded within 24 months; and Microsoft for Startups grants up to $150,000 across eligible Azure services.",
+        "sourcey_url": "https://sourcey.com/c/aws/offers/aws-activate-founders-credits",
+        "vendor_url": "https://aws.amazon.com/startups/",
+        "checked_date": "2026-09-25"
+      },
+      "draft": "Three programs you can apply to without a warm intro, and they stack because they are separate vendors.\n\nAWS Activate Founders is $1,000 for self-funded pre-Series B startups founded in the last 10 years, and selected participants can reach $5,000. It is the easiest one to get since it does not require an investor or an accelerator.\n\nGoogle for Startups Start is up to $2,000 for startups founded within 24 months that plan to seek venture funding. Microsoft for Startups is the largest of the three at up to $150,000 across eligible Azure services, and it is worth applying to even if you are not on Azure yet because the credit is the reason to move.\n\nSince you already applied for AWS AI credits, the natural next step is Google and Microsoft in the same week rather than one at a time. Each has its own review, so running them in parallel costs you nothing but the applications."
     },
     {
-      "type": "relevance_argument",
-      "note": "The poster is asking how to safely scope an AI agent's access to AWS (read-only roles, credential handling). The cost-decidability finding is a direct blocker on the same problem: an agent cannot reliably pre-estimate AWS spend from the API at all, which changes how tightly you can bound the role."
+      "thread_url": "https://www.reddit.com/r/indianstartups/comments/1wcdmje/",
+      "subreddit": "r/indianstartups",
+      "post_date": "2026-09-10",
+      "question": "Which startup credit and perks programs are actually useful, especially ones that bundle several benefits instead of requiring separate applications?",
+      "rules_url": "https://www.reddit.com/r/indianstartups/about/rules",
+      "rules_note": "r/indianstartups requires relevant content and bans direct sales or promotion; naming programs in answer to a direct question is relevant content, not promotion.",
+      "fact": {
+        "claim": "The largest single-vendor credit programs are Google for Startups Scale at up to $100,000 in year one for VC-funded startups, AWS Activate at up to $200,000 for pre-Series B startups with a Provider Org ID, and Microsoft for Startups at up to $150,000 across eligible Azure services.",
+        "sourcey_url": "https://sourcey.com/c/google-cloud/offers/google-for-startups-cloud-program-scale",
+        "vendor_url": "https://cloud.google.com/startup",
+        "checked_date": "2026-09-25"
+      },
+      "draft": "The ones that bundle the most per application are the three cloud programs, and they are worth treating as the base layer rather than as perks.\n\nGoogle for Startups Scale is up to $100,000 in year one plus 20% up to another $100,000 in year two, and it is gated on being VC-funded. AWS Activate goes to $200,000 for pre-Series B startups that come through a Provider Org ID, which usually means an accelerator or an investor. Microsoft for Startups is up to $150,000 across eligible Azure services and does not carry the same funding gate as the other two.\n\nThe reason I would start there is that the credit is the largest line item in most early startup budgets, so a single approval moves more money than a stack of smaller SaaS discounts. The SaaS perk bundles are real but they tend to be per-seat discounts on tools you may not be paying for yet.\n\nOne caveat worth knowing before you apply: the cloud credits are the part people actually use, and the funding requirement on the bigger tiers is what usually decides which one you can get."
     }
   ]
 }
